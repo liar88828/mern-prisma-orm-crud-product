@@ -5,7 +5,7 @@ import {createProduct, deleteProduct, getProduct, getProductById, updateProduct}
 const router = express.Router()
 
 
-router.get('/product', getProduct)
+router.get('/products/', getProduct)
 router.post('/product/', createProduct)
 router.get('/product/:id', getProductById)
 router.patch('/product/:id', updateProduct)
