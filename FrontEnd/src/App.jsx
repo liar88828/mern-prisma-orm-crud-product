@@ -1,36 +1,20 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {ProductList} from "./containers/ProductList";
+import AddProduct from "./containers/AddProduct";
+import {EditProduct} from "./containers/EditProduct";
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/super-heroes'>Traditional Super Heroes</Link>
-            </li>
-            <li>
-              <Link to='/rq-super-heroes'>RQ Super Heroes</Link>
-            </li>
-          </ul>
-        </nav>
-        {/*<Switch>*/}
-        {/*  <Route path='/super-heroes'>*/}
-        {/*    <SuperHeroesPage />*/}
-        {/*  </Route>*/}
-        {/*  <Route path='/rq-super-heroes'>*/}
-        {/*    <RQSuperHeroesPage />*/}
-        {/*  </Route>*/}
-        {/*  <Route path='/'>*/}
-        {/*    <HomePage />*/}
-        {/*  </Route>*/}
-        {/*</Switch>*/}
-      </div>
-    </Router>
-  )
+	return (
+			<Router>
+				<div className={'container'}>
+					<Routes>
+						<Route path='/' element={<ProductList/>}/>
+						<Route path='/add' element={<AddProduct/>}/>
+						<Route path='/edit/id' element={<EditProduct/>}/>
+					</Routes>
+				</div>
+			</Router>
+	)
 }
 
 export default App

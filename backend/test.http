@@ -9,8 +9,8 @@ POST http://localhost:5000/product/
 Content-Type: application/json
 
 {
-  "name": "from backend",
-  "price": 999
+  "name": "test hahahah",
+  "price": 89898
 }
 ###
 PATCH http://localhost:5000/product/2
