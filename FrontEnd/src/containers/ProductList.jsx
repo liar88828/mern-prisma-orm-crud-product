@@ -7,9 +7,9 @@ export const ProductList = () => {
 	const {mutate} = useSWRConfig()
 	const fetcher = async () => {
 		const respon = await axios.get('http://localhost:5000/products/')
+		console.log('get')
 		return respon.data
-
-	}
+                                               	}
 	const {data} = useSwr('products', fetcher)
 	if (!data) return <h2>Loading</h2>
 

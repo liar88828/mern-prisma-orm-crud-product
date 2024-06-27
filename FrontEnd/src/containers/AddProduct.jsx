@@ -13,12 +13,14 @@ function AddProduct() {
 		await axios.post('http://localhost:5000/product/', {
 			name: name, price: parseInt(price)
 		})
+		console.log('post')
 		navigate('/')
 	}
 	const inputName = 'w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow';
 
 
 	return (<div className={'max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow'}>
+		<h1>ADD PRODUCT</h1>
 		<form onSubmit={handleSubmit}
 		      className={'my-10`'}>
 			<div className="flex flex-col">
